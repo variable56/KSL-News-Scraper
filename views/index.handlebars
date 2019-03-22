@@ -1,0 +1,19 @@
+<nav class="navbar navbar-light bg-light">
+          <form class="form-inline">
+            <button id="scrape" class="btn btn-outline-primary my-2 my-sm-0" type="submit">Get Scrapin!</button>
+          </form>
+        </nav>
+    <div id="wrapper">
+      <h1>KSL Article Scraper</h1>
+      <h2><i>Scrape your favorite articles and leave comments</i></h2>
+      <div id="articles"></div>
+      <div id="notes"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+
+<ul class="">
+  {{#each this.article}}
+   <li><a href={{this.link}}>{{this.title}}</a></li>
+  {{/each}}
+</ul>
