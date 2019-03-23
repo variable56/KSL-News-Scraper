@@ -41,6 +41,19 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 // Routes
 
+app.get("/", function(req, res) {
+  
+  db.Article.find({}).then(function(data) {
+    var hbsObject = {
+      article: data
+    };
+    console.log(hbsObject);
+    res.render("index", hbsObject);
+  })
+    
+});
+
+
 // A GET route for scraping the echoJS website
 app.get("/scrape", function(req, res) {
   // First, we grab the body of the html with axios
