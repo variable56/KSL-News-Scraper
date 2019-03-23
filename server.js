@@ -142,6 +142,11 @@ app.post("/articles/:id", function(req, res) {
     });
 });
 
+app.delete("/dropdb"), function(req,res) {
+  
+  db.dropDatabase()
+}
+
 // Start the server
 app.listen(PORT, function() {
   console.log("App running on port " + PORT + "!");

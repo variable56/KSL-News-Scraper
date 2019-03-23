@@ -66,6 +66,10 @@ $(document).on("click", "#notes", function() {
       $("#notes").empty();
     });
 
+    $(document).on("click", "#deleteArticles", function() {
+      alert("delete button working");
+    });
+
   // Also, remove the values entered in the input and textarea for note entry
   $("#titleinput").val("");
   $("#bodyinput").val("");
